@@ -1,0 +1,50 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "dohflare",
+  "main": "src/_worker.js",
+  "compatibility_date": "2026-02-27",
+  "observability": {
+    "enabled": false
+  },
+  "placement": {
+    "mode": "smart" // Recommended for Edge Proxies to minimize global routing latency
+  },
+  // Environment Variables (Vars)
+  // The application codebase implements robust runtime defaults for all parameters below.
+  // Uncomment specific variables only to override the default execution behavior.
+  "vars": {
+    // Upstream Resolution & Routing Configuration
+    // "UPSTREAM_URLS": "[\"https://dns.google/dns-query\", \"https://dns11.quad9.net/dns-query\"]",  // List of DNS resolvers for upstream resolution
+    // "DOH_PATH": "/dns-query",  // Path for the DNS over HTTPS endpoint
+    // "DOH_CONTENT_TYPE": "application/dns-message",  // Content type for DNS over HTTPS queries
+    
+    // Landing Page Display Settings
+    // "ROOT_CONTENT": "<!doctype html><html><body>Custom Landing Page</body></html>",  // Optional custom landing page HTML content
+    // "ROOT_CONTENT_TYPE": "text/html; charset=utf-8",  // Content type for the landing page
+    // "ROOT_CACHE_TTL": "86400",  // Cache time-to-live (TTL) for the root page in seconds
+
+    // Network & Payload Validation Constraints
+    // "MAX_CACHEABLE_BYTES": "65536",  // Maximum size (in bytes) of cacheable DNS responses
+    // "MAX_POST_BODY_BYTES": "8192",  // Maximum size (in bytes) for POST request body
+    // "FETCH_TIMEOUT_MS": "2500",  // Timeout (in milliseconds) for DNS fetch requests
+    // "MAX_RETRIES": "2",  // Maximum number of retries for failed DNS fetch requests
+
+    // DNS Protocol & ECS Defaults
+    // "DEFAULT_POSITIVE_TTL": "60",  // Default TTL for positive DNS responses in seconds
+    // "DEFAULT_NEGATIVE_TTL": "15",  // Default TTL for negative DNS responses in seconds
+    // "FALLBACK_ECS_IP": "119.29.29.0",  // Default ECS (EDNS Client Subnet) IP for geolocation fallback
+
+    // L2 Global Cache & Rate Limiting Directives
+    // "CF_CACHE_WRITE_THRESHOLD": "500",  // Threshold for when to write to the global cache
+    // "GLOBAL_WRITE_COOLDOWN_MS": "300000",  // Cooldown period (in milliseconds) for global cache writes
+    // "GLOBAL_WRITE_PER_MINUTE_LIMIT": "200",  // Rate limit for writes to the global cache per minute
+    // "GLOBAL_CACHE_NAMESPACE": "https://dohflare.local/cache/",  // Namespace for global cache keys
+
+    // L1 Isolate Memory Cache & Stale Mechanisms
+    // "HOT_WINDOW_MS": "60000",  // Time window (in milliseconds) for tracking hot cache entries
+    // "HOT_HIT_THRESHOLD": "20",  // Threshold for determining whether a cache entry is considered "hot"
+    // "STALE_WINDOW_FACTOR": "0.5",  // Factor for calculating the stale window based on expiry time
+    // "EXTREME_STALE_FALLBACK_MS": "86400000",  // Time window (in milliseconds) after which stale entries are considered for fallback
+    // "JITTER_PCT": "10"  // Percentage of jitter to apply to TTL for load balancing purposes
+  }
+}

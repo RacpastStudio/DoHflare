@@ -1,0 +1,22 @@
+DoHflare - High-Performance DNS over HTTPS Edge Proxy
+Copyright (C) 2026  Racpast <https://github.com/Racpast/DoHflare>
+
+===========================================================================
+ADDITIONAL TERMS PURSUANT TO SECTION 7 OF GNU AGPLv3
+===========================================================================
+
+This Program is licensed under the GNU Affero General Public License, version 3. In accordance with Section 7, the following additional terms and permissions apply:
+
+1. ATTRIBUTION REQUIREMENTS (Section 7b):
+   For any work that includes this source code or a modified version thereof, the "Powered by DoHflare" attribution and the link to the original repository (https://github.com/Racpast/DoHflare) must be preserved in any user-facing interface (such as a web landing page or dashboard). If the Program as received by you displays such an attribution, you must not remove it.
+
+2. TRADEMARK DISCLAIMER (Section 7e):
+   The GitHub, Cloudflare, and Cloudflare Workers logos and brand names are trademarks of their respective owners and are used here for identification and informational purposes only. Their use does not imply endorsement by GitHub, Cloudflare, or any related entities. This license does not grant you any rights to use these trademarks in connection with your modified versions of the program.
+
+3. MISREPRESENTATION (Section 7c):
+   Modified versions of this software must clearly distinguish themselves from the original version, such as by using a different name, version number, or other reasonable means, and must not misrepresent the origin of the software.
+
+4. RESEARCH, COMPLIANCE, AND SERVICE TERMS (Section 7d):
+   This Program is intended solely for network security research, performance testing, and educational purposes. It is not designed, intended, or authorized to be used as a tool to bypass any national censorship, Internet filtering, or regulatory systems. Furthermore, this Program is not intended to violate or facilitate the violation of any Cloudflare Terms of Service (ToS) or Acceptable Use Policies.
+
+   The program's author does not provide any proxy services or means to circumvent legal or contractual restrictions. Users are strictly and solely responsible for ensuring that their use of this Program complies with all applicable local, national, and international laws, as well as the terms of any service providers involved. The author shall not be held liable for any misuse or violation of third-party terms by users.
