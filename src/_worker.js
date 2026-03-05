@@ -15,9 +15,9 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program. If not, see <https://www.gnu.org/licenses/>.
  *
- * ADDITIONAL NOTICE: Pursuant to Section 7 of the GNU AGPLv3, 
- * additional terms apply to this work. Refer to the NOTICE file 
- * in the repository for details regarding attribution requirements, 
+ * ADDITIONAL NOTICE: Pursuant to Section 7 of the GNU AGPLv3,
+ * additional terms apply to this work. Refer to the NOTICE file
+ * in the repository for details regarding attribution requirements,
  * trademark disclaimers, and compliance policies.
  */
 
@@ -655,16 +655,20 @@ class DnsPacketProcessor {
 class DoHCoreEngine {
   static initializeConfig(environmentVariables) {
     const parseArraySafely = (value, fallback) => {
-       if (!value) return fallback;
-       if (value.includes(",")) {
-          return value.split(",").map(v => v.trim());
-       }
-
-       try {
-          return JSON.parse(value);
-       } catch {
-          return fallback;
-       }
+      if (!value) return fallback;
+      try {
+        const parsed = JSON.parse(value);
+        if (Array.isArray(parsed)) {
+          return parsed;
+        }
+      } catch {}
+      if (value.includes(",")) {
+        return value
+          .split(",")
+          .map((v) => v.trim())
+          .filter(Boolean);
+      }
+      return [value.trim()];
     };
 
     return {
