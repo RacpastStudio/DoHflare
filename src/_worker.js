@@ -654,13 +654,17 @@ class DnsPacketProcessor {
    ========================================================================== */
 class DoHCoreEngine {
   static initializeConfig(environmentVariables) {
-    const parseArraySafely = (jsonString, fallbackArray) => {
-      if (!jsonString) return fallbackArray;
-      try {
-        return JSON.parse(jsonString);
-      } catch {
-        return fallbackArray;
-      }
+    const parseArraySafely = (value, fallback) => {
+       if (!value) return fallback;
+       if (value.includes(",")) {
+          return value.split(",").map(v => v.trim());
+       }
+
+       try {
+          return JSON.parse(value);
+       } catch {
+          return fallback;
+       }
     };
 
     return {
