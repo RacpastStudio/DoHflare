@@ -3,9 +3,6 @@
   "name": "dohflare",
   "pages_build_output_dir": "src",
   "compatibility_date": "2026-02-27",
-  "observability": {
-    "enabled": false
-  },
   "placement": {
     "mode": "smart" // Recommended for Edge Proxies to minimize global routing latency
   },
