@@ -4,7 +4,7 @@
   "pages_build_output_dir": "src",
   "compatibility_date": "2026-02-27",
   "placement": {
-    "mode": "smart" // Recommended for Edge Proxies to minimize global routing latency
+    "mode": "smart", // Recommended for Edge Proxies to minimize global routing latency
   },
   // Environment Variables (Vars)
   // The application codebase implements robust runtime defaults for all parameters below.
