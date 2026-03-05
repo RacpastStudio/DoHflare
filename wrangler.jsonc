@@ -1,7 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "dohflare",
-  "main": "src/_worker.js",
+  "pages_build_output_dir": "src",
   "compatibility_date": "2026-02-27",
   "observability": {
     "enabled": false
