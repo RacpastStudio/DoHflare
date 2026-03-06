@@ -12,7 +12,7 @@
   "vars": {
     // Upstream Resolution & Routing Configuration
     "UPSTREAM_URLS": "https://dns.google/dns-query,https://dns11.quad9.net/dns-query",  // List of DNS resolvers for upstream resolution
-    "DOH_PATH": "/dns-query"  // Path for the DNS over HTTPS endpoint
+    "DOH_PATH": "/dns-query",  // Path for the DNS over HTTPS endpoint
     // "DOH_CONTENT_TYPE": "application/dns-message",  // Content type for DNS over HTTPS queries
     
     // Landing Page Display Settings
